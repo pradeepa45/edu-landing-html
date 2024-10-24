@@ -1,0 +1,335 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title KC Overseas Education · Pune
+    link(href='https://db.onlinewebfonts.com/c/604c3826d04854ecb7e53030f4acda4c?family=BuenosAires-Regular' rel='stylesheet')
+    link(rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css')
+    script(src='https://unpkg.com/swiper/swiper-bundle.min.js')
+    link(rel="stylesheet" href="/output.css")
+    link(rel="stylesheet" href="/index.css")
+
+  body(class="text-white")
+
+    header(class="flex justify-between w-full lg:px-[80px] px-4 sticky top-0 bg-violet lg:py-8 z-50 py-6")
+      picture 
+        img(src="/assets/svgs/logo.svg" width="auto" height="auto" class="logo")
+      nav(class="hidden lg:flex lg:justify-center lg:items-center lg:gap-8")
+        each item in services
+          span 
+            a.scroll-link(href=item.url) #{item.name}
+        button(class="border border-white rounded-lg px-6 py-3 secondary") Course Finder
+
+    <!-- hero section -->
+    section(class="hero flex flex-col")
+
+      <!-- hero body -->
+      div(class="flex justify-center lg:py-20 flex-col items-center lg:px-[240px] px-4 relative gap-4")
+
+        <!-- stars -->
+        div(class="stars-container absolute inset-0 border-none")
+          svg.floating-shape.absolute(style='top: 10%; left: 15%' width='6' height='6' viewbox='0 0 6 6' fill='none' xmlns='http://www.w3.org/2000/svg')
+            circle(cx='3' cy='3' r='3' fill='white')
+          svg.star.absolute(style='top: 20%; left: 15%' width='18' height='18' viewbox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M8.06974 1.35872C8.40266 0.51457 9.59734 0.51457 9.93026 1.35872L11.6691 5.76755C11.7707 6.02527 11.9747 6.22927 12.2325 6.33092L16.6413 8.06974C17.4854 8.40266 17.4854 9.59734 16.6413 9.93026L12.2325 11.6691C11.9747 11.7707 11.7707 11.9747 11.6691 12.2325L9.93026 16.6413C9.59734 17.4854 8.40266 17.4854 8.06974 16.6413L6.33092 12.2325C6.22927 11.9747 6.02527 11.7707 5.76755 11.6691L1.35872 9.93026C0.51457 9.59734 0.51457 8.40266 1.35872 8.06974L5.76755 6.33092C6.02527 6.22927 6.22927 6.02527 6.33092 5.76755L8.06974 1.35872Z' fill='white')
+          svg.star.absolute(style='top: 85%; left: 25%' width='6' height='6' viewbox='0 0 6 6' fill='none' xmlns='http://www.w3.org/2000/svg')
+            circle(cx='3' cy='3' r='3' fill='white')
+
+          svg.floating-shape.absolute(style='top: 20%; left: 75%' width='12' height='12' viewbox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+            circle(cx='6' cy='6' r='5.5' stroke='white')
+          svg.floating-shape.absolute(style='top: 30%; left: 95%' width='6' height='6' viewbox='0 0 6 6' fill='none' xmlns='http://www.w3.org/2000/svg')
+            circle(cx='3' cy='3' r='3' fill='white')
+          svg.star.absolute(style='top: 60%; left: 95%' width='18' height='18' viewbox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M8.06974 1.35872C8.40266 0.51457 9.59734 0.51457 9.93026 1.35872L11.6691 5.76755C11.7707 6.02527 11.9747 6.22927 12.2325 6.33092L16.6413 8.06974C17.4854 8.40266 17.4854 9.59734 16.6413 9.93026L12.2325 11.6691C11.9747 11.7707 11.7707 11.9747 11.6691 12.2325L9.93026 16.6413C9.59734 17.4854 8.40266 17.4854 8.06974 16.6413L6.33092 12.2325C6.22927 11.9747 6.02527 11.7707 5.76755 11.6691L1.35872 9.93026C0.51457 9.59734 0.51457 8.40266 1.35872 8.06974L5.76755 6.33092C6.02527 6.22927 6.22927 6.02527 6.33092 5.76755L8.06974 1.35872Z' fill='white')
+
+        <!-- text content -->
+        p(class="inline-flex items-center gap-2.5 lg:text-lg text-base")
+          span(class="text-white opacity-50") Home 
+          span(class="h-2 w-2 rounded-full bg-white bg-opacity-50")
+          span(class="text-center") Pune Branch
+        h1(class="md:text-[42px] lg:mt-4 text-[26px] inline-flex flex-col") KC Overseas Education
+          span(id="pune") Pune
+        p.text-center.w-full(class='lg:max-w-2xl lg:mt-9 font-light mx-5 lg:mx-0')
+          | We value your career aspirations, which is why we map your preferences with the best that our global
+          | universities have to offer. Thousands of our students are pursuing their programs and aspirations in eminent
+          | universities globally and we welcome you to pursue yours!
+
+        <!-- CTAs -->
+        div.flex.gap-8.flex-col.mb-20(class='lg:mt-10 lg:flex-row lg:mb-0')
+          button.primary-btn.z-10 Enquire now
+          div.flex.gap-2.items-center.justify-center
+            button.flex.items-center.justify-center.bg-white.rounded-full.text-dark(class='h-[48px] w-[48px]')
+              svg(width='16' height='10' viewbox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(d='M15 1L8.33333 9L1 0.999999' stroke='#0E1B2C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+            span Branch Address
+
+    <!-- services -->
+    section.py-16.text-dark.flex.flex-col.items-center.justify-center.gap-10#services
+
+      h2(class='md:text-[42px] lg:mt-4 text-[26px]') Services we provide
+
+      div.flex.items-center.justify-center.flex-wrap.px-4(class='lg:px-0 lg:gap-7')
+
+        div.service-card.flex.flex-wrap.basis-full.p-6.rounded-xl.items-center.justify-start.gap-6(class='md:basis-[500px]')
+          svg(width='28' height='32' viewbox='0 0 28 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M9.57143 21.3571V18.1429M9.57143 18.1429V7.42857C9.57143 6.2451 10.5308 5.28571 11.7143 5.28571C12.8978 5.28571 13.8571 6.2451 13.8571 7.42857V16H21.042C22.9913 16 24.5714 17.5802 24.5714 19.5294V21.3571C24.5714 26.6827 20.2542 31 14.9286 31H13.8571C9.12327 31 5.28571 27.1624 5.28571 22.4286C5.28571 20.0616 7.20449 18.1429 9.57143 18.1429ZM17.0714 11.7143H21.3571C24.3158 11.7143 26.7143 9.31581 26.7143 6.35714C26.7143 3.39847 24.3158 1 21.3571 1H6.35714C3.39847 1 1 3.39847 1 6.35714C1 9.31581 3.39847 11.7143 6.35714 11.7143' stroke='#FDAF4D' stroke-width='2')
+          span.capitalize Test preparing &amp; coaching
+
+        div.service-card.flex.basis-full.p-6.rounded-xl.items-center.justify-start.gap-6(class='md:basis-[500px]')
+          svg(width='28' height='32' viewbox='0 0 28 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(fill-rule='evenodd' clip-rule='evenodd' d='M13.8655 18.1428C16.2328 18.1428 18.154 16.2228 18.154 13.8571C18.154 11.4914 16.2328 9.57139 13.8655 9.57139C11.4983 9.57139 9.57702 11.4914 9.57702 13.8571C9.57702 16.2228 11.4983 18.1428 13.8655 18.1428Z' stroke='#FF7361' stroke-width='2' stroke-linecap='square')
+            path(fill-rule='evenodd' clip-rule='evenodd' d='M26.7311 13.8571C26.7311 24.5714 16.0098 31 13.8655 31C11.7213 31 1 24.5714 1 13.8571C1 6.7578 6.76161 1 13.8655 1C20.9694 1 26.7311 6.7578 26.7311 13.8571Z' stroke='#FF7361' stroke-width='2' stroke-linecap='square')
+          span.capitalize Course, Country &amp; University Selection
+
+        div.service-card.flex.basis-full.p-6.rounded-xl.items-center.justify-start.gap-6(class='md:basis-[500px]')
+          svg(width='32' height='32' viewbox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M20.2857 22.4286V31L24.5714 27.7857L28.8571 31V22.4286M31 10.6429V3.14286C31 1.95939 30.0406 1 28.8571 1H3.14286C1.95939 1 1 1.95939 1 3.14286V28.8571C1 30.0406 1.95939 31 3.14286 31H17.0714M6.35714 9.57143H17.0714M6.35714 16H12.7857M24.5714 24.5714C21.021 24.5714 18.1429 21.6933 18.1429 18.1429C18.1429 14.5925 21.021 11.7143 24.5714 11.7143C28.1218 11.7143 31 14.5925 31 18.1429C31 21.6933 28.1218 24.5714 24.5714 24.5714Z' stroke='#226CF5' stroke-width='2' stroke-linejoin='round')
+          span.capitalize Application Assistance
+
+        div.service-card.flex.basis-full.p-6.rounded-xl.items-center.justify-start.gap-6(class='md:basis-[500px]')
+          svg(width='32' height='32' viewbox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M16 20.9375L11.3645 23.5L12.25 18.0725L8.5 14.2291L13.6823 13.4379L16 8.5L18.3177 13.4379L23.5 14.2291L19.75 18.0725L20.6355 23.5L16 20.9375Z' stroke='#6C48F0' stroke-width='2' stroke-linejoin='round')
+            path(d='M1 16C1 24.2843 7.71573 31 16 31C24.2843 31 31 24.2843 31 16C31 7.71573 24.2843 1 16 1C7.71573 1 1 7.71573 1 16Z' stroke='#6C48F0' stroke-width='2' stroke-linejoin='round')
+          span.capitalize Scholarships
+
+      button.primary-btn.text-white.mb-20 Enquire now
+
+      div.flex.justify-between.gap-20.flex-col.items-center(class='max-w-[1110px] lg:mb-[180px] lg:flex-row lg:px-0 px-5 mb-[90px]')
+        img(src='/assets/images/services.png' width='490' height='440')
+        div.flex.flex-col.justify-center.gap-4.px-4(class='lg:px-0 md:w-[500px] w-full mx-auto')
+          h3(class='text-[26px] mb-14 lg:mb-0') Realize your global ambitions with us
+          p.text-grey(class="mb-5 lg:mb-0")
+            | With a keen ear for your choices and preferences, our counselling experience is so seamless
+            | that you will
+            | land in your dream university even before you do!
+          ul
+            each item in [ {name: 'Virtual & In Person Coaching and Counselling', icon: '' }, { name: 'Comprehensive Assistance for Applications, Admissions &amp; Visas', icon: '' }, {name: 'High Value Scholarships and Study Loans', icon: ''}]
+              li.flex.gap-2.items-center.-ml-4
+                img(src='/assets/images/star.png' height='60' width='60')
+                span.mb-4 #{item.name}
+
+    <!-- 7 steps -->
+    section.bg-purple.py-20.text-dark.swiper-unique
+      .mx-auto.px-4.py-12
+        h1.text-2xl.font-bold.text-center.mb-12(class='md:text-3xl') 7 Easy Steps to Land in your Dream University
+
+        .relative.carousel-parent.carousel-wrapper
+          .swiper-container-unique
+            .swiper-wrapper.mb-5
+              each step in steps
+                div.swiper-slide
+                  div.flex.justify-center.flex-col.items-center.gap-10
+                    div.step-number #{step.number}
+                    .step-card
+                      .square
+                      .icon-container
+                        img(src=step.svg height='60' width='105')
+                      h3.font-semibold.text-lg.mb-2 #{step.title}
+                      p.text-gray-600.text-sm #{step.sub}
+
+          .flex.justify-between.items-center.relative.mx-auto.navigation.gap-10.pt-5
+            button.swiper-button-prev.whitespace-nowrap.flex.gap-4.items-center.justify-center Previous Step
+            button.swiper-button-next.whitespace-nowrap.flex.gap-4.items-center.justify-center Next Step
+
+    <!-- Webinars and Events -->
+    section.flex.flex-col.items-center.justify-center.text-dark.mx-auto(class='my-[120px]')#webinars
+      h2.text-center.mb-10(class='md:text-[42px] lg:mt-4 text-[26px]') Webinars &amp; Events
+
+      div.hidden.pb-8(class='lg:grid lg:grid-cols-2 gap-[30px]')
+        div.flex.flex-col.rounded-lg.overflow-hidden.card-large
+          img(class='basis-1/2' width='500px' height='350' src='/assets/images/event1.png')
+          div.py-4.flex.flex-col(class='px-[30px]')
+            p.text-blue.text-sm.leading-8
+              a(href='') Mar 19 &middot; 05:00 PM to 07:30 PM
+            p.text-dark.capitalize(class='text-[22px]' title='USA Vertual Addmission Day') USA Vertual Addmission Day
+            p.text-grey.line-clamp-2.text-ellipsis
+              | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+              | laborum.
+            button.mt-5.flex.gap-3.items-center.text-primary.font-medium.capitalize.mb-12
+              span Register now
+              svg(width='9' height='12' viewbox='0 0 9 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(d='M1.71387 1L7.42815 5.7619L1.71387 11' stroke='#FF7361' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+
+        div.flex.flex-col(class='gap-[30px]')
+          div.flex.rounded-lg.overflow-hidden.card-large
+            img(width='195px' height='auto' src='/assets/images/event2.png')
+            .flex.flex-col(class='p-[30px]')
+              p.text-blue.text-xs.leading-8
+                a(href='') May 18 - May 21 &middot; 04:30 PM to 06:30 PM
+              p.text-dark.capitalize(class='text-[22px]' title='USA Vertual Addmission Day')
+                | New Zealand Virtual Admissions Week
+              p.text-grey.line-clamp-2.text-ellipsis
+                | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                | laborum.
+              button.mt-5.flex.gap-3.items-center.text-primary.font-medium.capitalize
+                span Register now
+                svg(width='9' height='12' viewbox='0 0 9 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+                  path(d='M1.71387 1L7.42815 5.7619L1.71387 11' stroke='#FF7361' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+          .flex.rounded-lg.overflow-hidden.card-large
+            img(width='195px' height='auto' src='/assets/images/event3.png')
+            .flex.flex-col(class='p-[30px]')
+              p.text-blue.text-xs.leading-8
+                a(href='') May 18 - May 21 &middot; 04:30 PM to 06:30 PM
+              p.text-dark.capitalize(class='text-[22px]' title='USA Vertual Addmission Day')
+                | New Zealand Virtual Admissions Week
+              p.text-grey.line-clamp-2.text-ellipsis
+                | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                | laborum.
+              button.mt-5.flex.gap-3.items-center.text-primary.font-medium.capitalize
+                span Register now
+                svg(width='9' height='12' viewbox='0 0 9 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+                  path(d='M1.71387 1L7.42815 5.7619L1.71387 11' stroke='#FF7361' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+
+      div.webinar-carousel.swiper.relative(class="lg:hidden")
+        div.swiper-wrapper.pb-8
+          each event in webinars
+            div.swiper-slide
+              div.flex.flex-col.rounded-lg.shadow-md.overflow-hidden.webinar-card.items-center.justify-start
+                img.basis-full(width="500px" height="350" src="/assets/images/event1.png" class="max-w-[300px] lg:max-w-[500px]")
+                div.py-4.flex.flex-col(class="px-[30px] max-w-[300px]")
+                  p.text-blue.text-sm.leading-8
+                    a(href='') #{event.time}
+                  p.text-dark.capitalize(class="text-[22px]" title=event.name) #{event.name}
+                  p.text-grey.line-clamp-2.text-ellipsis #{event.description}
+                  button.mt-5.flex.gap-3.items-center.text-primary.font-medium.capitalize.mb-12
+                    span Register now
+                    svg(width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M1.71387 1L7.42815 5.7619L1.71387 11" stroke="#FF7361" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+
+
+      button.flex.gap-3.items-center.text-primary.font-medium.capitalize
+        span See more
+        svg(width='9' height='12' viewbox='0 0 9 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(d='M1.71387 1L7.42815 5.7619L1.71387 11' stroke='#FF7361' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+
+  <!-- Testimonials -->
+    section.bg-pink.flex.flex-col.py-20.items-center.justify-center.text-dark.swiper-unique#testimonials.mx-auto.px-4.py-12
+      h1.text-2xl.font-bold.text-center.mb-12(class='md:text-3xl') Our students love us
+
+      .relative.testimonial-swiper.swiper.carousel-wrapper
+        .swiper-wrapper
+          each item in testimonials
+            div.swiper-slide
+              div.testimonial-card.bg-white.rounded-lg.shadow-lg.p-8.flex.flex-col.justify-between.overflow-hidden
+                .flex.flex-col.gap-5.basis-full
+                  div
+                    svg(width='33' height='22' viewbox='0 0 33 22' fill='none' xmlns='http://www.w3.org/2000/svg')
+                      path(fill-rule='evenodd' clip-rule='evenodd' d='M0.0268314 14.2425C0.0232656 14.3373 0.0214669 14.4326 0.0214669 14.5283C0.0214665 18.6548 3.36666 22 7.49316 22C11.6197 22 14.9648 18.6548 14.9648 14.5283C14.9648 10.4018 11.6197 7.05662 7.49316 7.05662C6.73001 7.05662 5.99359 7.17103 5.3001 7.38364C6.81694 4.06868 11.3772 1.11105 13.5806 -0.0015527C2.06863 2.26762 -0.255894 10.445 0.0208356 14.25L0.0268314 14.2425Z' fill='#226CF5')
+                      path(fill-rule='evenodd' clip-rule='evenodd' d='M18.0483 14.2419C18.0448 14.3369 18.043 14.4324 18.043 14.5283C18.043 18.6548 21.3881 22 25.5146 22C29.6411 22 32.9863 18.6548 32.9863 14.5283C32.9863 10.4018 29.6411 7.05662 25.5146 7.05662C24.7513 7.05662 24.0147 7.1711 23.321 7.38382C24.8378 4.06879 29.3981 1.11107 31.6016 -0.0015527C20.0896 2.26762 17.7651 10.445 18.0418 14.25L18.0483 14.2419Z' fill='#226CF5')
+                  p.text-gray-700.mb-6.text-left #{item.comment}
+                .mt-4
+                  p.text-left #{item.name}
+                  p.text-sm.text-grey.text-left #{item.college}, #{item.location}
+        .flex.justify-between.items-center.relative.mx-auto.py-5.navigation.gap-10
+          .swiper-pagination.mt-8
+
+  <!-- Latest KC Updates -->
+  section.py-20.text-dark.flex.flex-col.items-center.gap-8
+    h2.text-center.mb-2(class='md:text-[42px] lg:mt-4 text-[26px]') Latest KC Updates
+    .swiper.update-carousel.pb-10(class='lg:hidden')
+      .swiper-wrapper
+        <!-- Card 1 -->
+        .swiper-slide
+          .update-card.bg-yellow.p-12.rounded-lg.relative.flex.flex-col.justify-between
+            .absolute.-bottom-12.-right-12
+              svg(width='416' height='340' viewbox='0 0 416 340' fill='none' xmlns='http://www.w3.org/2000/svg')
+                circle(opacity='0.5' cx='443.5' cy='254.5' r='253.5' stroke='white' stroke-width='2')
+                circle(opacity='0.5' cx='254.5' cy='411.5' r='253.5' stroke='white' stroke-width='2')
+            div
+              h3.text-3xl.mb-4.text-left We&apos;re Hiring!
+              p.text-left(class='text-[20px]')
+                | KC continues recruitments for its offices across India and
+                | Asia even
+                | during
+                | the
+                | unprecedented times of Covid.
+            button.px-6.py-2.rounded-lg.w-full.text-yellow(class='!bg-white') Apply now
+
+        <!-- Card 2 -->
+        .swiper-slide
+          .update-card.p-12.rounded-lg.relative.flex.flex-col.items-center.justify-center
+            .flex.flex-col.items-center.justify-center(class='basis-[150px]')
+              img(src='/assets/images/airc.png' height='120' width='120')
+            h3.text-center.my-4(class='max-h-[60px]') American International Recruitment Council
+            .flex.items-center.flex-col
+              svg(width='70' height='20' viewbox='0 0 70 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(opacity='0.2' d='M34.0697 2.35872C34.4027 1.51457 35.5973 1.51457 35.9303 2.35872L37.6691 6.76755C37.7707 7.02527 37.9747 7.22927 38.2325 7.33092L42.6413 9.06974C43.4854 9.40266 43.4854 10.5973 42.6413 10.9303L38.2325 12.6691C37.9747 12.7707 37.7707 12.9747 37.6691 13.2325L35.9303 17.6413C35.5973 18.4854 34.4027 18.4854 34.0697 17.6413L32.3309 13.2325C32.2293 12.9747 32.0253 12.7707 31.7675 12.6691L27.3587 10.9303C26.5146 10.5973 26.5146 9.40266 27.3587 9.06974L31.7675 7.33092C32.0253 7.22927 32.2293 7.02527 32.3309 6.76755L34.0697 2.35872Z' fill='#64647A')
+                path(opacity='0.2' d='M61.0697 4.35872C61.4027 3.51457 62.5973 3.51457 62.9303 4.35872L64.1034 7.33323C64.205 7.59095 64.409 7.79496 64.6668 7.8966L67.6413 9.06974C68.4854 9.40266 68.4854 10.5973 67.6413 10.9303L64.6668 12.1034C64.409 12.205 64.205 12.409 64.1034 12.6668L62.9303 15.6413C62.5973 16.4854 61.4027 16.4854 61.0697 15.6413L59.8966 12.6668C59.795 12.409 59.591 12.205 59.3332 12.1034L56.3587 10.9303C55.5146 10.5973 55.5146 9.40266 56.3587 9.06974L59.3332 7.8966C59.591 7.79496 59.795 7.59095 59.8966 7.33323L61.0697 4.35872Z' fill='#64647A')
+                path(opacity='0.2' d='M7.06974 5.35872C7.40266 4.51457 8.59734 4.51457 8.93026 5.35872L10.1034 8.33323C10.205 8.59095 10.409 8.79496 10.6668 8.8966L13.6413 10.0697C14.4854 10.4027 14.4854 11.5973 13.6413 11.9303L10.6668 13.1034C10.409 13.205 10.205 13.409 10.1034 13.6668L8.93026 16.6413C8.59734 17.4854 7.40266 17.4854 7.06974 16.6413L5.8966 13.6668C5.79496 13.409 5.59095 13.205 5.33323 13.1034L2.35872 11.9303C1.51457 11.5973 1.51457 10.4027 2.35872 10.0697L5.33323 8.8966C5.59095 8.79496 5.79496 8.59095 5.8966 8.33323L7.06974 5.35872Z' fill='#64647A')
+            .flex.flex-col.grow.items-center.justify-start
+              button.text-blue.my-4.capitalize certified agents
+              p October 2018 - 2028
+
+        <!-- Card 3 -->
+        .swiper-slide
+          .update-card.p-12.rounded-lg.relative.flex.flex-col.items-center.justify-center
+            .flex.flex-col.items-center.justify-center(class='basis-[150px]')
+              img(src='/assets/images/british-council.png' height='60' width='180' class="object-contain")
+            h3.text-center.my-4(class='h-[60px]') The British Council
+            .flex.flex-col.items-center
+              svg(width='70' height='20' viewbox='0 0 70 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                path(opacity='0.2' d='M34.0697 2.35872C34.4027 1.51457 35.5973 1.51457 35.9303 2.35872L37.6691 6.76755C37.7707 7.02527 37.9747 7.22927 38.2325 7.33092L42.6413 9.06974C43.4854 9.40266 43.4854 10.5973 42.6413 10.9303L38.2325 12.6691C37.9747 12.7707 37.7707 12.9747 37.6691 13.2325L35.9303 17.6413C35.5973 18.4854 34.4027 18.4854 34.0697 17.6413L32.3309 13.2325C32.2293 12.9747 32.0253 12.7707 31.7675 12.6691L27.3587 10.9303C26.5146 10.5973 26.5146 9.40266 27.3587 9.06974L31.7675 7.33092C32.0253 7.22927 32.2293 7.02527 32.3309 6.76755L34.0697 2.35872Z' fill='#64647A')
+                path(opacity='0.2' d='M61.0697 4.35872C61.4027 3.51457 62.5973 3.51457 62.9303 4.35872L64.1034 7.33323C64.205 7.59095 64.409 7.79496 64.6668 7.8966L67.6413 9.06974C68.4854 9.40266 68.4854 10.5973 67.6413 10.9303L64.6668 12.1034C64.409 12.205 64.205 12.409 64.1034 12.6668L62.9303 15.6413C62.5973 16.4854 61.4027 16.4854 61.0697 15.6413L59.8966 12.6668C59.795 12.409 59.591 12.205 59.3332 12.1034L56.3587 10.9303C55.5146 10.5973 55.5146 9.40266 56.3587 9.06974L59.3332 7.8966C59.591 7.79496 59.795 7.59095 59.8966 7.33323L61.0697 4.35872Z' fill='#64647A')
+                path(opacity='0.2' d='M7.06974 5.35872C7.40266 4.51457 8.59734 4.51457 8.93026 5.35872L10.1034 8.33323C10.205 8.59095 10.409 8.79496 10.6668 8.8966L13.6413 10.0697C14.4854 10.4027 14.4854 11.5973 13.6413 11.9303L10.6668 13.1034C10.409 13.205 10.205 13.409 10.1034 13.6668L8.93026 16.6413C8.59734 17.4854 7.40266 17.4854 7.06974 16.6413L5.8966 13.6668C5.79496 13.409 5.59095 13.205 5.33323 13.1034L2.35872 11.9303C1.51457 11.5973 1.51457 10.4027 2.35872 10.0697L5.33323 8.8966C5.59095 8.79496 5.79496 8.59095 5.8966 8.33323L7.06974 5.35872Z' fill='#64647A')
+            .flex.flex-col.grow.items-center.justify-center
+              button.text-blue.my-4.capitalize advanced Agent certificate
+              p August 2016 - 2018
+
+    .gap-4.mx-auto.flex-wrap.hidden(class='lg:max-w-[1110px] lg:flex')
+      .basis-full.card-large.bg-yellow.p-12.rounded-lg.relative.flex.flex-col.justify-between(class='lg:basis-1/2 h-[500px]')
+        .absolute.-bottom-12.-right-12
+          svg(width='416' height='340' viewbox='0 0 416 340' fill='none' xmlns='http://www.w3.org/2000/svg')
+            circle(opacity='0.5' cx='443.5' cy='254.5' r='253.5' stroke='white' stroke-width='2')
+            circle(opacity='0.5' cx='254.5' cy='411.5' r='253.5' stroke='white' stroke-width='2')
+        div
+          h3.text-3xl.mb-4 We&apos;re Hiring!
+          p(class='max-w-[340px] text-[20px]') KC continues recruitments for its offices across India and Asia even during the unprecedented times of Covid.
+        button.px-6.py-2.rounded-lg.w-fit.text-yellow(class='!bg-white') Apply now
+      .basis-full.card-large.p-12.rounded-lg.relative.flex.flex-col.items-center.justify-center(class='lg:basis-1/4 h-[500px]')
+        .flex.flex-col.items-center.justify-center(class='basis-[200px]')
+          img(src='assets/images/airc.png' height='120' width='120')
+        h3.text-center.my-4(class='max-h-[60px]') American International Recruitment Council
+        .flex.items-center.flex-col
+          svg(width='70' height='20' viewbox='0 0 70 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(opacity='0.2' d='M34.0697 2.35872C34.4027 1.51457 35.5973 1.51457 35.9303 2.35872L37.6691 6.76755C37.7707 7.02527 37.9747 7.22927 38.2325 7.33092L42.6413 9.06974C43.4854 9.40266 43.4854 10.5973 42.6413 10.9303L38.2325 12.6691C37.9747 12.7707 37.7707 12.9747 37.6691 13.2325L35.9303 17.6413C35.5973 18.4854 34.4027 18.4854 34.0697 17.6413L32.3309 13.2325C32.2293 12.9747 32.0253 12.7707 31.7675 12.6691L27.3587 10.9303C26.5146 10.5973 26.5146 9.40266 27.3587 9.06974L31.7675 7.33092C32.0253 7.22927 32.2293 7.02527 32.3309 6.76755L34.0697 2.35872Z' fill='#64647A')
+            path(opacity='0.2' d='M61.0697 4.35872C61.4027 3.51457 62.5973 3.51457 62.9303 4.35872L64.1034 7.33323C64.205 7.59095 64.409 7.79496 64.6668 7.8966L67.6413 9.06974C68.4854 9.40266 68.4854 10.5973 67.6413 10.9303L64.6668 12.1034C64.409 12.205 64.205 12.409 64.1034 12.6668L62.9303 15.6413C62.5973 16.4854 61.4027 16.4854 61.0697 15.6413L59.8966 12.6668C59.795 12.409 59.591 12.205 59.3332 12.1034L56.3587 10.9303C55.5146 10.5973 55.5146 9.40266 56.3587 9.06974L59.3332 7.8966C59.591 7.79496 59.795 7.59095 59.8966 7.33323L61.0697 4.35872Z' fill='#64647A')
+            path(opacity='0.2' d='M7.06974 5.35872C7.40266 4.51457 8.59734 4.51457 8.93026 5.35872L10.1034 8.33323C10.205 8.59095 10.409 8.79496 10.6668 8.8966L13.6413 10.0697C14.4854 10.4027 14.4854 11.5973 13.6413 11.9303L10.6668 13.1034C10.409 13.205 10.205 13.409 10.1034 13.6668L8.93026 16.6413C8.59734 17.4854 7.40266 17.4854 7.06974 16.6413L5.8966 13.6668C5.79496 13.409 5.59095 13.205 5.33323 13.1034L2.35872 11.9303C1.51457 11.5973 1.51457 10.4027 2.35872 10.0697L5.33323 8.8966C5.59095 8.79496 5.79496 8.59095 5.8966 8.33323L7.06974 5.35872Z' fill='#64647A')
+        .flex.flex-col.grow.items-center.justify-start
+          button.text-blue.my-4.capitalize certified agents
+          p October 2018 - 2028
+      .basis-full.card-large.p-12.rounded-lg.relative.flex.flex-col.items-center.justify-center(class='lg:basis-1/4 h-[500px]')
+        .flex.flex-col.items-center.justify-center(class='basis-[200px]')
+          img(src='assets/images/british-council.png' height='60' width='180' class="object-contain")
+        h3.text-center.my-4(class='h-[60px]') The British Council
+        .flex.flex-col.items-center
+          svg(width='70' height='20' viewbox='0 0 70 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(opacity='0.2' d='M34.0697 2.35872C34.4027 1.51457 35.5973 1.51457 35.9303 2.35872L37.6691 6.76755C37.7707 7.02527 37.9747 7.22927 38.2325 7.33092L42.6413 9.06974C43.4854 9.40266 43.4854 10.5973 42.6413 10.9303L38.2325 12.6691C37.9747 12.7707 37.7707 12.9747 37.6691 13.2325L35.9303 17.6413C35.5973 18.4854 34.4027 18.4854 34.0697 17.6413L32.3309 13.2325C32.2293 12.9747 32.0253 12.7707 31.7675 12.6691L27.3587 10.9303C26.5146 10.5973 26.5146 9.40266 27.3587 9.06974L31.7675 7.33092C32.0253 7.22927 32.2293 7.02527 32.3309 6.76755L34.0697 2.35872Z' fill='#64647A')
+            path(opacity='0.2' d='M61.0697 4.35872C61.4027 3.51457 62.5973 3.51457 62.9303 4.35872L64.1034 7.33323C64.205 7.59095 64.409 7.79496 64.6668 7.8966L67.6413 9.06974C68.4854 9.40266 68.4854 10.5973 67.6413 10.9303L64.6668 12.1034C64.409 12.205 64.205 12.409 64.1034 12.6668L62.9303 15.6413C62.5973 16.4854 61.4027 16.4854 61.0697 15.6413L59.8966 12.6668C59.795 12.409 59.591 12.205 59.3332 12.1034L56.3587 10.9303C55.5146 10.5973 55.5146 9.40266 56.3587 9.06974L59.3332 7.8966C59.591 7.79496 59.795 7.59095 59.8966 7.33323L61.0697 4.35872Z' fill='#64647A')
+            path(opacity='0.2' d='M7.06974 5.35872C7.40266 4.51457 8.59734 4.51457 8.93026 5.35872L10.1034 8.33323C10.205 8.59095 10.409 8.79496 10.6668 8.8966L13.6413 10.0697C14.4854 10.4027 14.4854 11.5973 13.6413 11.9303L10.6668 13.1034C10.409 13.205 10.205 13.409 10.1034 13.6668L8.93026 16.6413C8.59734 17.4854 7.40266 17.4854 7.06974 16.6413L5.8966 13.6668C5.79496 13.409 5.59095 13.205 5.33323 13.1034L2.35872 11.9303C1.51457 11.5973 1.51457 10.4027 2.35872 10.0697L5.33323 8.8966C5.59095 8.79496 5.79496 8.59095 5.8966 8.33323L7.06974 5.35872Z' fill='#64647A')
+        .flex.flex-col.grow.items-center.justify-center
+          button.text-blue.my-4.capitalize advanced Agent certificate
+          p August 2016 - 2018
+
+    button.flex.gap-3.items-center.text-primary.font-medium.capitalize
+      span More news
+      svg(width='9' height='12' viewbox='0 0 9 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+        path(d='M1.71387 1L7.42815 5.7619L1.71387 11' stroke='#FF7361' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+
+
+  footer.flex.flex-col.items-center.justify-center.py-20.gap-8.relative
+    .absolute.left-0.-top-12(class="lg:top-4 lg:left-4").trinket
+      img(src='/assets/svgs/trinket.svg' height='121' width='131')
+    h2(class='md:text-[42px] lg:mt-4 text-[26px] mx-8 text-center pt-6') Stay updated with KC Overseas
+    .flex.gap-4.flex-col(class='lg:items-center lg:flex-row')
+      input.border.border-midnight.px-5.py-2.rounded.basis-full(class='lg:basis-[300px]' placeholder='Email ID')
+      button.bg-white.px-5.py-2.border.border-midnight.rounded.text-grey.flex.items-center.justify-between(class='lg:min-w-[300px]')
+        span I&apos;m interested in
+        svg(width='10' height='7' viewbox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(d='M9 1L5.19048 5.57143L1 1' stroke='#0E1B2C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+      button.primary-btn.whitespace-nowrap.w-full(class="lg:w-fit") Subscribe now
+
+  script(src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js')
+  script(src='/carousels.js')
+  script(src='/button.js')
+  script(src='/hero.js')

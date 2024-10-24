@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.service-card {
+  @apply shadow-lg;
+}
+
+.card-large {
+  @apply shadow-md;
+  max-width: 500px;
+}
+
+.update-card {
+  @apply shadow-sm;
+  height: 500px;
+  width: 300px;
+}
+
+.webinar-card {
+  @apply shadow-sm;
+  height: 470px;
+  width: 300px;
+}
+
+
+/* common */
+:root {
+  --swiper-theme-color: theme(colors.primary) !important;
+  --tw-shadow-color: theme(colors.shadow)
+}
+
+html {
+  font-family: "BuenosAires-Regular";
+}
+
+button.primary-btn {
+  background: linear-gradient(263.28deg, theme(colors.primary) 1.1%, theme(colors.yellow) 141.83%);
+  background-size: 500%;
+  @apply shadow-lg py-[14px] px-6 rounded-lg h-12;
+}
+
+button {
+  @apply hover:cursor-pointer;
+}
+
+p::selection, 
+textarea::selection,
+input::selection ,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection 
+{
+  @apply bg-yellow;
+}
+
+/* hero */
+section.hero {
+  background-image: url('../assets/images/hero.png');
+  @apply bg-cover bg-center;
+  border-bottom-left-radius: 50% 8%;
+  border-bottom-right-radius: 50% 8%;
+}
+
+@media screen (max-width: 768px) {
+  section.hero {
+    @apply bg-contain;
+  }
+}
+
+#pune {
+  @apply relative text-white z-[2] w-fit mx-auto text-center;
+}
+
+#pune:after {
+  content: attr(data-content);
+  @apply absolute bottom-0 left-0 w-full h-1/2 bg-lavender -z-10;
+}
+
+
+
+
+/* general carousel */
+
+.carousel-parent {
+  @apply mx-auto overflow-hidden w-full;
+}
+
+@media screen and (min-width: 1024px) {
+  .carousel-wrapper {
+    max-width: 1110px;
+  }
+}
+
+.swiper-slide.div {
+  @apply shadow-md;
+}
+
+.swiper-pagination-bullet-active {
+  @apply p-1 bg-grey;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-prev {
+  @apply relative flex-row-reverse w-fit items-center;
+  --swiper-navigation-color: theme(colors.primary) !important;
+}
+
+.swiper-button-next {
+  @apply relative flex w-fit items-center;
+  --swiper-navigation-color: theme(colors.primary) !important;
+}
+
+/* .swiper-container-unique - carousel 1 */
+
+.swiper-unique.swiper-button-prev::after,
+.swiper-unique.swiper-button-next::after {
+  @apply !relative;
+  --swiper-navigation-size: 20px !important;
+  content: attr(data-content);
+}
+
+.swiper-container-unique::before,
+.swiper-container-unique::after {
+  content: '';
+  @apply absolute top-0 bottom-0 w-[100px] z-10 pointer-events-none;
+}
+
+.swiper-container-unique::before {
+  @apply left-0;
+  background: linear-gradient(
+    to right,
+    theme(colors.purple) 0%,
+    #dbd9ff00 100%
+  );
+}
+
+.swiper-container-unique::after {
+  @apply right-0;
+  background: linear-gradient(
+    to left,
+    theme(colors.purple) 0%,
+    rgba(219, 217, 255, 0) 100%
+  );
+}
+
+.step-card {
+  @apply bg-white rounded-lg p-6 shadow-md w-[340px] h-[260px] flex flex-col relative items-center justify-center text-center;
+}
+
+.step-number {
+  @apply h-12 w-12 rounded-full flex items-center justify-center z-10 border border-grey text-grey shadow-md;
+}
+
+.active.step-number {
+  @apply text-dark bg-white border-white
+}
+
+.square {
+  @apply w-10 h-10 bg-white rotate-45 absolute -top-5 left-[150px];
+}
+
+.icon-container {
+  @apply w-16 h-16 rounded-xl flex items-center justify-center mb-4;
+}
+
+/* testimonial */
+.testimonial-swiper-wrapper {
+  --swiper-navigation-sides-offset: -40px;
+  --swiper-navigation-size: 20px;
+  @apply !text-grey;
+}
+
+.testimonial-swiper-wrapper.swiper-pagination-bullet-active {
+  @apply !bg-grey;
+}
+
+.testimonial-card {
+  @apply bg-white rounded-lg p-6 shadow-md w-[340px] h-[360px];
+}
+
+/* footer */
+
+footer {
+  background: url('../assets/svgs/footer.svg');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+@media screen and (max-width: 440px) {
+  footer {
+    min-height: 470px;
+    border-top-left-radius: 50% 10%;
+    border-top-right-radius: 50% 10%;
+  }
+}

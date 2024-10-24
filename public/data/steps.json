@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Counselling",
+    "sub": "Plan your Academic and Career Goals",
+    "number": 1,
+    "svg": "../assets/svgs/counselling.svg"
+  },
+  {
+    "title": "Preparation",
+    "sub": "Appear for Standardized Tests",
+    "number": 2,
+    "svg": "../assets/svgs/preparation.svg"
+  },
+  {
+    "title": "Counselling",
+    "sub": "Plan your Academic and Career Goals",
+    "number": 3,
+    "svg": "../assets/svgs/counselling.svg"
+  },
+  {
+    "title": "Preparation",
+    "sub": "Appear for Standardized Tests",
+    "number": 4,
+    "svg": "../assets/svgs/preparation.svg"
+  },
+  {
+    "title": "Counselling",
+    "sub": "Plan your Academic and Career Goals",
+    "number": 5,
+    "svg": "../assets/svgs/counselling.svg"
+  },
+  {
+    "title": "Preparation",
+    "sub": "Appear for Standardized Tests",
+    "number": 6,
+    "svg": "../assets/svgs/preparation.svg"
+  },
+  {
+    "title": "Counselling",
+    "sub": "Plan your Academic and Career Goals",
+    "number": 7,
+    "svg": "../assets/svgs/counselling.svg"
+  }
+]
